@@ -1,8 +1,11 @@
 const route=require("express").Router()
-const data=require('../dummydata/data')
-route.get("/bollywood",data.bollywood)
-route.get("/hollywood",data.hollywood)
-route.get("/technology",data.technology)
-route.get("/fitness",data.fitness)
-route.get("/food",data.food)
+
+const controller = require("../Controller/action");
+
+route.get("/bollywood",controller.bollywood)
+route.get("/hollywood",controller.hollywood)
+route.get("/technology",controller.technology)
+route.get("/fitness",controller.fitness)
+route.get("/food",controller.food)
+
 module.exports=route;
